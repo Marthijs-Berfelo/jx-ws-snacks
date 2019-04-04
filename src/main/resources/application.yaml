@@ -1,0 +1,12 @@
+spring:
+  data:
+    mongodb:
+      database: jx-workshop
+      port: 27017
+
+---
+spring:
+  profiles: docker-stack
+  data:
+    mongodb:
+      host: mongo

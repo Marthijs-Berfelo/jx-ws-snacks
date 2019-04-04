@@ -1,0 +1,14 @@
+type Query {
+	snacks: [Snack]
+}
+
+type Snack {
+	id: ID!
+	name: String
+	reviews: [Review]
+}
+
+type Mutation {
+	newSnack(name: String!) : Snack!
+	deleteSnack(id: ID!) : Boolean
+}

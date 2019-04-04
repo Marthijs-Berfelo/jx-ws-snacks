@@ -1,0 +1,16 @@
+extend type Query {
+	reviews(snackId: ID!): [Review]
+}
+
+scalar LocalDateTime
+
+type Review {
+	snackId: ID!
+	rating: Int
+	text: String!
+	created: LocalDateTime!
+}
+
+extend type Mutation {
+	newReview(snackId: ID!, rating: Int, text: String!) : Review!
+}
